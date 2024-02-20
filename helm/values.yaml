@@ -1,10 +1,10 @@
 frontend:
-  image: lyzhang1999/frontend
+  image: ninesun0318/frontend
   tag: '1276e23'
   autoscaling:
     averageUtilization: 90
 backend:
-  image: lyzhang1999/backend
+  image: ninesun0318/backend
   tag: '1276e23'
   autoscaling:
     averageUtilization: 90
