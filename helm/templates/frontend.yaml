@@ -33,6 +33,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend-service
+  annotations:
+    kubernetes.io/elb.id: 9cbbfc30-fc43-428b-95eb-72ccdd37d949 # ELB ID，替换为实际值  
 spec:
   type: LoadBalancer
   selector:
