@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: go-backend
-          image: lyzhang1999/log-example:latest
+          image: ninesun0318/log-example:latest
           imagePullPolicy: Always
           resources:
             requests:

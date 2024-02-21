@@ -15,7 +15,7 @@ spec:
       - name: github-regcred
       containers:
       - name: sample-spring
-        image: ghcr.io/lyzhang1999/sample-kotlin-spring:latest
+        image: ghcr.io/ninesun0318/sample-kotlin-spring:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

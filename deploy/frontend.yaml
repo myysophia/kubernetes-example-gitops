@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: react-frontend
-        image: lyzhang1999/frontend:latest
+        image: ninesun0318/frontend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
