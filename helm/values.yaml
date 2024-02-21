@@ -1,11 +1,11 @@
 frontend:
   image: ninesun0318/frontend
-  tag: '0bf2f25'
+  tag: 'bbb719f'
   autoscaling:
     averageUtilization: 90
 backend:
   image: ninesun0318/backend
-  tag: '0bf2f25'
+  tag: 'bbb719f'
   autoscaling:
     averageUtilization: 90
 database:
