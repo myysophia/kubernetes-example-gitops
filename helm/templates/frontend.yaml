@@ -33,8 +33,19 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend-service
-  # annotations:
-  #   kubernetes.io/elb.id: 8f77abec-5476-4a75-bf8b-a7ea5497303f # ELB ID，替换为实际值  
+  annotations:
+    kubernetes.io/elb.id: 8f77abec-5476-4a75-bf8b-a7ea5497303f # ELB ID，替换为实际值
+    kubernetes.io/elb.class: union                   # 负载均衡器类型，union 独享， performance：独享型
+    kubernetes.io/elb.lb-algorithm: ROUND_ROBIN                   # 负载均衡器算法
+    kubernetes.io/elb.session-affinity-mode: SOURCE_IP          # 会话保持类型为源IP
+    kubernetes.io/elb.session-affinity-option: '{"persistence_timeout": "30"}'     # 会话保持时间（分钟）
+    kubernetes.io/elb.health-check-flag: 'on'                   # 开启ELB健康检查功能
+    kubernetes.io/elb.health-check-option: '{
+      "protocol":"TCP",
+      "delay":"5",
+      "timeout":"10",
+      "max_retries":"3"
+    }'  
 spec:
   type: LoadBalancer
   selector:

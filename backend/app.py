@@ -1,8 +1,9 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 import os
 import subprocess
 from flask import request
+from database import db
 
 app = Flask(__name__)
 
@@ -14,7 +15,7 @@ db_password = os.environ.get('DATABASE_PASSWORD')
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://"+ db_username +":"+ db_password +"@" + \
     db_uri+"/postgres"
 
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 db.init_app(app)
 
 
